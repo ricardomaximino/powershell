@@ -34,6 +34,8 @@ choco install nodejs -y
 
 choco install nodejs -y
 
+choco install notepadplusplus -y
+
 choco install googlechrome -y
 
 choco install 7zip -y
@@ -43,6 +45,8 @@ choco install adobereader -y
 choco install scenebuilder -y
 
 choco install audacity -y
+
+choco install shotcut -y
 
 choco install whatsapp -y
 
