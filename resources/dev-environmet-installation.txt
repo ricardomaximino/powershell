@@ -56,6 +56,10 @@ choco install mobaXterm -y
 
 choco install microsoft-teams -y
 
+choco install blender -y
+
+choco install GoogleChrome -y
+
 # Enabling the Virtual Machine Platform
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
  
