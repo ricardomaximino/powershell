@@ -14,7 +14,7 @@ choco install maven -y
 
 choco install vscode --params "/NoDesktopIcon" -y
 
-choco info intellijidea-community -y
+choco install intellijidea-community -y
 
 choco install git -y
 
