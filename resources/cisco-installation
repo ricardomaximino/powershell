@@ -1,0 +1,32 @@
+# Go to the VPN folder
+# Select manually 
+#    [
+#        Core & VPN, 
+#        AMP Enabler, 
+#        Network Visibility Module, 
+#        ISE Posture, 
+#        Diagnostic And Reporting Tool
+#    ]
+Start-Process .\anyconnect-win-4.8.01090-predeploy-k9\Setup.exe
+
+# Copy the .\XML\EUIPO_VPN_Profile.xml
+Copy-Item .\XML\EUIPO_VPN_Profile.xml -Destination 'C:\ProgramData\Cisco\Cisco AnyConnect Secure Mobility Client\Profile\EUIPO_VPN_Profile.xml'
+
+# Copy the .\XML\AMPEnabler_ServiceProfile.xml
+Copy-Item .\XML\AMPEnabler_ServiceProfile.xml -Destination 'C:\ProgramData\Cisco\Cisco AnyConnect Secure Mobility Client\AMPEnabler\AMPEnabler_ServiceProfile.xml'
+
+# Create ISE Profile directory
+New-Item 'C:\ProgramData\Cisco\Cisco AnyConnect Secure Mobility Client\Profile\ISE Posture' -ItemType Directory
+
+# Copy the .\XML\ISEPostureCFG.xml
+Copy-Item .\XML\ISEPostureCFG.xml -Destination 'C:\ProgramData\Cisco\Cisco AnyConnect Secure Mobility Client\Profile\ISE Posture\ISEPostureCFG.xml'
+Copy-Item .\XML\ISEPostureCFG.xml -Destination 'C:\ProgramData\Cisco\Cisco AnyConnect Secure Mobility Client\ISE Posture\ISEPostureCFG.xml'
+
+# Run the ISE Compliance
+Start-Process .\anyconnect-win-4.3.770.6145-isecompliance-predeploy-k9.msi
+
+# Launch Cisco
+Start-Process 'C:\Program Files (x86)\Cisco\Cisco AnyConnect Secure Mobility Client\vpnui.exe'
+
+# At this point you must set the certicates and connect the VPN to update everything.
+# if it doesn't work quit cisco and open it again, open also windows task manager to check if CISCOAMP and CISCOSCMS services are running
