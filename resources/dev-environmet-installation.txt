@@ -119,3 +119,15 @@ Start-Process .\Office\OfficeSetup.exe
 
 # Install FortClient VPN 
 Start-Process .\FortClient\FortiClientVPNOnlineInstaller_7.0.exe
+
+# Upgrade a program installed with chocolatey
+# choco upgrade blender
+
+# Upgrade all programs installed with chocolatey
+# choco upgrade all
+
+# Prevent the upgrade
+# choco pin add -n=blender
+
+# Allow upgrade
+# choco pin remove -n=blender
