@@ -7,6 +7,7 @@ choco install notepadplusplus -y
 # Open JDK 17 (master) - Current Release
 # choco install openjdk8 -y
 # choco install openjdk11 -y
+# choco install openjdk17 -y
 choco install openjdk -y
 
 # Maven 3.8.2 - Current Release
@@ -46,15 +47,13 @@ choco install shotcut -y
 
 choco install whatsapp -y
 
-choco install pycharm-community -y
+# choco install pycharm-community -y
 
 choco install mobaXterm -y
 
 choco install microsoft-teams -y
 
 choco install blender -y
-
-choco install GoogleChrome -y
 
 choco install zoom -y  
 
@@ -88,7 +87,7 @@ cd C:\Users\ricardomaximino\work\euipo\VPN
 #        ISE Posture, 
 #        Diagnostic And Reporting Tool
 #    ]
-Start-Process .\anyconnect-win-4.8.01090-predeploy-k9\Setup.exe
+Start-Process .\anyconnect-win-4.10.06079-predeploy-k9\Setup.exe
 
 # Copy the .\XML\EUIPO_VPN_Profile.xml
 Copy-Item .\XML\EUIPO_VPN_Profile.xml -Destination 'C:\ProgramData\Cisco\Cisco AnyConnect Secure Mobility Client\Profile\EUIPO_VPN_Profile.xml'
@@ -104,7 +103,7 @@ Copy-Item .\XML\ISEPostureCFG.xml -Destination 'C:\ProgramData\Cisco\Cisco AnyCo
 Copy-Item .\XML\ISEPostureCFG.xml -Destination 'C:\ProgramData\Cisco\Cisco AnyConnect Secure Mobility Client\ISE Posture\ISEPostureCFG.xml'
 
 # Run the ISE Compliance
-Start-Process .\anyconnect-win-4.3.770.6145-isecompliance-predeploy-k9.msi
+Start-Process .\cisco-secure-client-win-4.3.3231.6146-isecompliance-predeploy-k9.msi
 
 # Launch Cisco
 Start-Process 'C:\Program Files (x86)\Cisco\Cisco AnyConnect Secure Mobility Client\vpnui.exe'
