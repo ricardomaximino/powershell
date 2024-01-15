@@ -2,6 +2,7 @@
 [string]$owner_name="Ricardo Maximino"
 [int]$owner_age=38
 [datetime]$owner_birthday="11/15/1982"
+[validateset("Ricardo","Maximino","Gonçalves","de","Moraes")] [string] $oneName = "Ricardo"
 
 Get-Service -Name n* | Out-File file.txt
 Get-Service -Name n* | Export-Csv file.csv
